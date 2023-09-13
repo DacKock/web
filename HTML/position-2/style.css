@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.modal {
+  width: 320px;
+  background-color: white;
+  padding: 15px;
+  position: fixed;
+}
+
+.modal-close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -20px;
+  right: -20px;
+  background: none;
+  border: none;
+}
+
+.btn {
+  padding: 7px 15px;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.success {
+  background-color: #35bb27;
+}
+
+.cancel {
+  background-color: #f9861f;
+}
+
+.flex-container {
+  display: flex;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 75px;
+  justify-content: center;
+}
