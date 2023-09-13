@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      p {
+        padding: 10px;
+        text-align: center;
+        border: 1px dashed #0f6b0a;
+        color: #0f6b0a;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function generateRandomColor() {
+        var red = Math.floor(Math.random() * 256);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 256);
+
+        return `rgb(${red}, ${green}, ${blue})`;
+      }
+
+      var container = document.getElementById("container");
+
+      for (var i = 0; i < 5; i++) {
+        var color = generateRandomColor();
+        document.write(
+          `<p style="background-color: ${color}; ">Абзац ${i + 1}</p>`
+        );
+      }
+    </script>
+  </body>
+</html>

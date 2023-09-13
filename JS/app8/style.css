@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+#svetofor {
+  margin: 20px auto;
+  padding: 30px;
+  width: 130px;
+  background-color: #696969;
+  background-image: linear-gradient(99deg, #4d4d4d 50%, #333 50%);
+  border: 5px groove #716d6d;
+  border-radius: 60px;
+  box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.63);
+}
+.circle {
+  width: 60px;
+  height: 60px;
+  border: 4px groove #696565;
+  border-radius: 50%;
+  background-color: #aaa;
+  margin-bottom: 40px;
+  box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.63);
+}
+.circle:last-of-type {
+  margin-bottom: 0;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: limegreen;
+}
+/* додатковий клас для приховування всіх кольорів, крім активного */
+.hidden {
+  background-color: #aaa;
+}

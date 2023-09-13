@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="svetofor">
+      <div class="circle red"></div>
+      <div class="circle yellow"></div>
+      <div class="circle green"></div>
+    </div>
+
+    <script>
+      const circles = document.querySelectorAll(".circle");
+
+      let activeIndex = 0;
+
+      function changeColor() {
+        circles[activeIndex].classList.remove("hidden");
+
+        for (let i = 0; i < circles.length; i++) {
+          if (i !== activeIndex) {
+            circles[i].classList.add("hidden");
+          }
+        }
+
+        activeIndex++;
+
+        if (activeIndex >= circles.length) {
+          activeIndex = 0;
+        }
+      }
+
+      setInterval(changeColor, 1500);
+    </script>
+  </body>
+</html>

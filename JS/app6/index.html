@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Оголошуємо змінні
+      let message = prompt("Введіть текст який хочете надрукувати");
+      let index = 0;
+      let index1 = 0;
+
+      function writeChar() {
+        document.write(message.charAt(index));
+        index++;
+      }
+
+      function writeWithTimeout() {
+        writeChar();
+
+        if (index < message.length) {
+          setTimeout(writeWithTimeout, 100);
+        }
+      }
+
+      function writeWithInterval() {
+        let timerId = setInterval(function () {
+          writeChar();
+
+          if (index > message.length) {
+            clearInterval(timerId);
+          }
+        }, 50);
+      }
+
+      window.onload = function () {
+        writeWithTimeout();
+        // writeWithInterval();
+      };
+    </script>
+  </body>
+</html>

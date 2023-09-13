@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userInput = prompt("Введіть число:");
+      let number = parseFloat(userInput);
+
+      if (isNaN(number)) {
+        alert("Це не число!");
+      } else {
+        let output = [];
+        for (let i = 2; i <= 10; i++) {
+          if (number % i === 0) {
+            output.push(`Число ділиться на ${i} без залишку`);
+            // alert(`Число ділиться на ${i} без залишку`);
+          }
+        }
+        alert(output.join("\n"));
+      }
+    </script>
+  </body>
+</html>

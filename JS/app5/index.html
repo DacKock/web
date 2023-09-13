@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let group1 = ["Агєєв", "Дмитренко", "Іванов", "Семенов", "Шаповалов"];
+      console.log("Масив до змін\n" + group1);
+      group1.push("Березин");
+      group1.unshift("Ященка");
+      console.log("Додавання студентів до масиву\n" + group1);
+      group1.splice(group1.indexOf("Семенов"), 1, "Ковальова", "Горобченко");
+      console.log(
+        "Видалення Семенова та додавання Ковальової та Горобченка\n" + group1
+      );
+      let group2 = ["Філонів", "Ізюмів", "Кабанов", "Дюдарєв"];
+      group1 = group1.concat(group2);
+      console.log("Об'єднання двох масивів\n" + group1);
+      group1.sort((a, b) => a.localeCompare(b, "uk"));
+      console.log("Сортування масиву за абеткою\n" + group1);
+    </script>
+  </body>
+</html>
